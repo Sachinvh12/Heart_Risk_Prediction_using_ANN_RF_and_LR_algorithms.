@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Heart Disease Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <img src="static/img/logonew.png" alt="Global">
+    <p>Global</p>
+  </a>
+  <p class="device-notification--message">Global has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="/">
+            <img src="static/img/logonew.png" alt="Global">
+            <p>Heart Disease Prediction</p>
+          </a>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>Logistic Regression</span></li>
+            <li><span>Random Forest</span></li>
+            <li><span>Artificial Neural Networks</span></li>
+            <li><span>Contact</span></li>
+            
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>Success!<br>your ML<br> models<br>are ready.</h1>
+               
+                <img src="static/img/introd.png" alt="Welcome">
+              </div>
+              <div class="intro--options">
+                <a href="#0">
+                  <h3>Logistic Regression results.</h3>
+                  <p>See how accurate our Logistic Regression model is for prediction.</p>
+                </a>
+                <a href="#0">
+                  <h3>Random Forest results.</h3>
+                  <p>See how accurate our Random Forest model is for prediction.</p>
+                </a>
+                <a href="#0">
+                  <h3>Artificial Neural Networks</h3>
+                  <p>See how accurate our Artificial Neural Network model is for prediction.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="l-section section">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>Logistic<br>Regression<br> model<br>results.</h1>
+                
+                <img src="static/img/introd.png" alt="Welcome">
+              </div>
+              <div class="intro--options">
+              
+                <a href="#0">
+                  <h3>Accuracy</h3>
+                  <p>Our Logistic Regression has an accuracy of {{data[0][0]}}%.</p>
+                </a>
+                <a href="#0">
+                  <h3>Precision</h3>
+                  <p>Our Logistic Regression has an precision of {{data[0][1]}}%.</p>
+                </a>
+                <a href="#0">
+                  <h3>Recall</h3>
+                  <p>Our Logistic Regression has an recall of {{data[0][2]}}%.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+         
+          <li class="l-section section">
+           <div class="intro">
+              <div class="intro--banner">
+                <h1>Random<br>Forest<br> model<br>results.</h1>
+                
+                <img src="static/img/introd.png" alt="Welcome">
+              </div>
+              <div class="intro--options">
+                <a href="#0">
+                  <h3>Accuracy</h3>
+                  <p>Our Random Forest has an accuracy of {{data[1][0]}}%.</p>
+                </a>
+                
+                <a href="#0">
+                  <h3>Precision</h3>
+                  <p>Our Random Forest has an precision of {{data[1][1]}}%.</p>
+                </a>
+                <a href="#0">
+                  <h3>Recall</h3>
+                  <p>Our Random Forest has an recall of {{data[1][2]}}%.</p>
+                </a>
+              </div>
+            </div>
+          </li>
+         
+          <li class="l-section section">
+             <div class="intro">
+              <div class="intro--banner">
+                <h1>Artificial<br>Neural<br>Networks<br> model<br>results.</h1>
+                
+                <img src="static/img/introd.png" alt="Welcome">
+              </div>
+              <div class="intro--options">
+                 <a href="#0">
+                  <h3>Accuracy</h3>
+                  <p>Our Random Forest has an accuracy of {{data[2][0]}}%.</p>
+                </a>
+                <a href="#0">
+                  <h3>Precision</h3>
+                  <p>Our Random Forest has an precision of {{data[2][1]}}%.</p>
+                </a>
+                <a href="#0">
+                  <h3>Recall</h3>
+                  <p>Our Random Forest has an recall of {{data[2][2]}}%.</p>
+                </a>
+              </div>
+            </div>
+         </li>
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>Machine<br>   Learning model<br>confusion<br>matrix.</h2>
+                
+                <img src="static/img/about-visual.png" alt="About Us">
+              </div>
+              <div class="about--options">
+                <a href="/static/img/conflr.png">
+                  <h3>Log. Reg.</h3>
+                </a>
+                <a href="/static/img/confrf.png">
+                  <h3>Rand. For.</h3>
+                </a>
+                <a href="/static/img/confann.png">
+                  <h3>ANN</h3>
+                </a>
+              </div>
+            </div>
+          </li>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>Logistic Regression</li>
+    <li>Random Forest</li>
+    <li>ANN</li>
+    <li>Contact</li>
+  </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="static/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="static/js/functions-min.js"></script>
+</body>
+</html>
