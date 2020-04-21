@@ -10,13 +10,15 @@ def func():
 	from sklearn.metrics import accuracy_score
 	from sklearn.metrics import precision_score
 	from sklearn.metrics import recall_score
+	import warnings
+	warnings.filterwarnings("ignore")
 
 	df=pd.read_csv("heart.csv")
 
 	df.columns = ['Age', 'Gender',	'ChestPain', 'RestingBloodPressure', 'Cholestrol', 'FastingBloodSugar', 'RestingECG', 'MaxHeartRateAchieved',
        'ExerciseIndusedAngina', 'Oldpeak', 'Slope', 'MajorVessels', 'Thalassemia', 'Target']
 
-	
+	print("Running Logistic Regression......")
 	from sklearn.linear_model import LogisticRegression
 	from sklearn.ensemble import RandomForestClassifier
 
@@ -27,7 +29,7 @@ def func():
 	X = ((X_data - np.min(X_data)) / (np.max(X_data) - np.min(X_data))).values
 
 	x_train, x_test, y_train, y_test = train_test_split(X,Y,test_size = 0.2,random_state=42)
-
+    
 
 
 	
@@ -43,6 +45,7 @@ def func():
 	lr_res.append(lr_accuracy*100)
 	lr_res.append(lr_precision*100)
 	lr_res.append(lr_recall*100)
+	print("Logistic Regression ran successfully.")
 	cm = confusion_matrix(y_test,lr_pred)
 	conf=sns.heatmap(cm,annot=True);
 	figure = conf.get_figure()    
@@ -50,7 +53,7 @@ def func():
 	plt.clf()
     
 
-
+	print("Running Random Forest Classifier...")
 	rfc = RandomForestClassifier(n_estimators = 50, max_depth = 3)
 
 	rfc.fit(x_train, y_train)
@@ -63,7 +66,7 @@ def func():
 	rfc_res.append(rfc_precision*100)
 	rfc_res.append(rfc_recall*100)
 
-	print('Random Forest Classifier Accuracy: {:.2f}%'.format(rfc_accuracy*100))
+	print('Random Forest Classifier ran succesfully.')
 	cm = confusion_matrix(y_test,rfc_pred)
 	conf=sns.heatmap(cm,annot=True);
 	figure = conf.get_figure()    
@@ -83,7 +86,7 @@ def func():
 	df2.drop(['slope','thal','restecg'],axis=1,inplace=True)
 	X = df2.drop(['target'], axis = 1)
 	y = df2.target.values
-	
+	print("Running artificial Neural Networks")
 	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 	from sklearn.preprocessing import StandardScaler
 	sc = StandardScaler()
@@ -98,7 +101,7 @@ def func():
 	from keras.layers import Activation, Dropout, Flatten, Dense
 	from keras.layers import Dense
 	import warnings
-
+	warnings.filterwarnings('ignore')
 
 
 	classifier = Sequential()
@@ -137,7 +140,7 @@ def func():
 	figure = conf.get_figure()
 	figure.savefig('confann.png', dpi=400,bbox_inches='tight',transparent=True)
 	plt.clf()
-	
+	print("artificial Neural Networks ran succesfully.")
 	
 	data=[]
 	data.append(lr_res) 
