@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Heart Disease Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="/">
+    <img src="static/img/logonew.png" alt="Global">
+    <p>Global</p>
+  </a>
+  <p class="device-notification--message">Global has so much to offer that we must request you orient your device to portrait or find a larger screen. You won't be disappointed.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="/">
+            <img src="static/img/logonew.png" alt="Global">
+            <p>Heart Disease Prediction</p>
+          </a>
+          
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Form</span></li>
+            
+            
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+        <div class="hire">
+              <h3><i>Get your heart risk prediction! Enter your attributes below.</i></h3>
+              <!-- checkout formspree.io for easy form setup -->
+              <form class="work-request" action="/heartriskscript" method="POST">
+                
+                    
+                <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="name" name="Age" type="text" spellcheck="false">
+                    <label for="name">Age</label>
+                  </div><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <div class="information-name">
+                    <input id="name" name="Gender" type="text" spellcheck="false">
+                    <label for="name">Gender</label>
+                  </div><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <div class="information-name">
+                    <input id="name" name="ChestPain" type="text" spellcheck="false">
+                    <label for="name">ChestPain</label>
+                  </div>
+
+                </div>
+                <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="name" name="RestingBP" type="text" spellcheck="false">
+                    <label for="name">RestingBP</label>
+                  </div><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <div class="information-name">
+                    <input id="name" name="Cholestrol" type="text" spellcheck="false">
+                    <label for="name">Cholestrol</label>
+                  </div><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <div class="information-name">
+                    <input id="name" name="FastingBloodSugar" type="text" spellcheck="false">
+                    <label for="name">FastingBloodSugar</label>
+                  </div>
+
+                </div>
+               <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="name" name="RestingECG" type="text" spellcheck="false">
+                    <label for="name">RestingECG</label>
+                  </div><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <div class="information-name">
+                    <input id="name" name="MaxHeartRate" type="text" spellcheck="false">
+                    <label for="name">MaxHeartRate</label>
+                  </div><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <div class="information-name">
+                    <input id="name" name="ExerciseIndusedAngina" type="text" spellcheck="false">
+                    <label for="name">ExerciseIndusedAngina</label>
+                  </div>
+
+                </div>
+               <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="name" name="Oldpeak" type="text" spellcheck="false">
+                    <label for="name">Oldpeak</label>
+                  </div><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <div class="information-name">
+                    <input id="name" name="Slope" type="text" spellcheck="false">
+                    <label for="name">Slope</label>
+                  </div><p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  <div class="information-name">
+                    <input id="name" name="MajorVessels" type="text" spellcheck="false">
+                    <label for="name">MajorVessels</label>
+                  </div>
+
+                </div>
+               <div class="work-request--information">
+                  <div class="information-name">
+                    
+                  <div class="information-name">
+                    <input id="name" name="Thalassemia" type="text" spellcheck="false">
+                    <label for="name">Thalassemia</label>
+                  </div>
+                    </br>
+                </div>
+
+                <input type="submit" value="Predict !">
+              </form>
+            </div>
+          </li>
+          </li>
+               
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="static/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="static/js/functions-min.js"></script>
+</body>
+</html>

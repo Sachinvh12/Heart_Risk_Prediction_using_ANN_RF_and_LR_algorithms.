@@ -65,7 +65,7 @@ def funcy():
                 yticklabels=corr.columns.values,mask=mask,cmap='summer_r',vmax=.3, center=0,
                 square=True, linewidths=.5, cbar_kws={"shrink": .5})
     figure = coerr.get_figure()    
-    figure.savefig('coerr.png', dpi=400,bbox_inches='tight',transparent=True)
+    figure.savefig('static/img/coerr.png', dpi=400,bbox_inches='tight',transparent=True)
     plt.clf()
     
 
@@ -87,7 +87,7 @@ def funcy():
     plt.title("Chest Pain Type Percentage")    
     plt.subplots_adjust(left=0.3, right=0.9, bottom=0.3, top=0.9)
 
-    plt.savefig("Chest Pain Type Percentage.png",bbox_inches='tight',transparent=True)
+    plt.savefig("static/img/cptp.png",bbox_inches='tight',transparent=True)
     plt.clf()
 
 
@@ -110,7 +110,7 @@ def funcy():
     ax.set_xticklabels(["Healthy Heart","Heart Disease"]);
 
 
-    plt.savefig("Heart-Health Vs Chest Pain Type.png",bbox_inches='tight',transparent=True)
+    plt.savefig("static/img/hhcp.png",bbox_inches='tight',transparent=True)
     plt.clf()
 
 
@@ -128,7 +128,7 @@ def funcy():
     for p in ax.patches:
         ax.annotate(p.get_height(), (p.get_x()+0.15, p.get_height()+0.5))
         ax.set_xticklabels(['Typical Angina','Atypical Angina','Non-Anginal','Asymptomatic']);
-    plt.savefig("People who have heart disease.png",bbox_inches='tight',transparent=True)
+    plt.savefig("static/img/pwhhd.png",bbox_inches='tight',transparent=True)
     plt.clf()
 
 
@@ -150,7 +150,7 @@ def funcy():
         ax.annotate(p.get_height(), (p.get_x()+0.35, p.get_height()+0.5))
     
     ax.set_xticklabels(["Normal BP","Abnormal BP"]);
-    plt.savefig("Resting Blood Pressure Count.png",bbox_inches='tight',transparent=True)
+    plt.savefig("static/img/rbpc.png",bbox_inches='tight',transparent=True)
     plt.clf()
 
 
@@ -177,7 +177,9 @@ def funcy():
         ax.annotate(p.get_height(), (p.get_x()+0.15, p.get_height()+0.5))
     
     ax.set_xticklabels(['Young (29-40)','Mid-Age(40-55)','Old-Age(>55)']);
-    plt.savefig("Heart-Health Vs Age group.png",bbox_inches='tight',transparent=True)
+    plt.savefig("static/img/hhag.png",bbox_inches='tight',transparent=True)
     plt.clf()
+    
+
     return render_template('edaran.html')
 

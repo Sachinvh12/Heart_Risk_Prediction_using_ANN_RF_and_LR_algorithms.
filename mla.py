@@ -49,7 +49,7 @@ def func():
 	cm = confusion_matrix(y_test,lr_pred)
 	conf=sns.heatmap(cm,annot=True);
 	figure = conf.get_figure()    
-	figure.savefig('conflr.png', dpi=400,bbox_inches='tight',transparent=True)
+	figure.savefig('static/img/conflr.png', dpi=400,bbox_inches='tight',transparent=True)
 	plt.clf()
     
 
@@ -70,7 +70,7 @@ def func():
 	cm = confusion_matrix(y_test,rfc_pred)
 	conf=sns.heatmap(cm,annot=True);
 	figure = conf.get_figure()    
-	figure.savefig('confrf.png', dpi=400,bbox_inches='tight',transparent=True)
+	figure.savefig('static/img/confrf.png', dpi=400,bbox_inches='tight',transparent=True)
 	plt.clf()
     
 	
@@ -117,7 +117,8 @@ def func():
 
 # Compiling the ANN
 	classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
-
+	import warnings
+	warnings.filterwarnings("ignore")
 
 
 
@@ -138,10 +139,9 @@ def func():
 	cm = confusion_matrix(y_test, y_pred.round())
 	conf=sns.heatmap(cm,annot=True);
 	figure = conf.get_figure()
-	figure.savefig('confann.png', dpi=400,bbox_inches='tight',transparent=True)
+	figure.savefig('static/img/confann.png', dpi=400,bbox_inches='tight',transparent=True)
 	plt.clf()
 	print("artificial Neural Networks ran succesfully.")
-	
 	data=[]
 	data.append(lr_res) 
 	data.append(rfc_res) 
